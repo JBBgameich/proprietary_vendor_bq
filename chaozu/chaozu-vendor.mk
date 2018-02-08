@@ -1,4 +1,4 @@
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -74,9 +74,13 @@ PRODUCT_COPY_FILES += \
     vendor/bq/chaozu/proprietary/etc/firmware/cpp_firmware_v1_6_0.fw:system/etc/firmware/cpp_firmware_v1_6_0.fw \
     vendor/bq/chaozu/proprietary/etc/firmware/cpp_firmware_v1_8_0.fw:system/etc/firmware/cpp_firmware_v1_8_0.fw \
     vendor/bq/chaozu/proprietary/etc/firmware/ice40.bin:system/etc/firmware/ice40.bin \
+    vendor/bq/chaozu/proprietary/etc/flp.conf:system/etc/flp.conf \
+    vendor/bq/chaozu/proprietary/etc/izat.conf:system/etc/izat.conf \
+    vendor/bq/chaozu/proprietary/etc/lowi.conf:system/etc/lowi.conf \
     vendor/bq/chaozu/proprietary/etc/permissions/ConnectivityExt.xml:system/etc/permissions/ConnectivityExt.xml \
     vendor/bq/chaozu/proprietary/etc/permissions/bq.software.bqservices.system.xml:system/etc/permissions/bq.software.bqservices.system.xml \
     vendor/bq/chaozu/proprietary/etc/permissions/bq.software.qcom.camera.full_support.xml:system/etc/permissions/bq.software.qcom.camera.full_support.xml \
+    vendor/bq/chaozu/proprietary/etc/permissions/bq.software.qcom.m.chaozu.xml:system/etc/permissions/bq.software.qcom.m.chaozu.xml \
     vendor/bq/chaozu/proprietary/etc/permissions/bq.software.qcom.m.xml:system/etc/permissions/bq.software.qcom.m.xml \
     vendor/bq/chaozu/proprietary/etc/permissions/bq.software.qcom.n.xml:system/etc/permissions/bq.software.qcom.n.xml \
     vendor/bq/chaozu/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
@@ -91,19 +95,9 @@ PRODUCT_COPY_FILES += \
     vendor/bq/chaozu/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
     vendor/bq/chaozu/proprietary/etc/permissions/qti_permissions.xml:system/etc/permissions/qti_permissions.xml \
     vendor/bq/chaozu/proprietary/etc/permissions/telephonyservice.xml:system/etc/permissions/telephonyservice.xml \
+    vendor/bq/chaozu/proprietary/etc/sap.conf:system/etc/sap.conf \
     vendor/bq/chaozu/proprietary/etc/thermal-engine.conf:system/etc/thermal-engine.conf \
-    vendor/bq/chaozu/proprietary/framework/ConnectivityExt.jar:system/framework/ConnectivityExt.jar \
-    vendor/bq/chaozu/proprietary/framework/QtiTelephonyServicelibrary.jar:system/framework/QtiTelephonyServicelibrary.jar \
-    vendor/bq/chaozu/proprietary/framework/cneapiclient.jar:system/framework/cneapiclient.jar \
-    vendor/bq/chaozu/proprietary/framework/com.qti.dpmframework.jar:system/framework/com.qti.dpmframework.jar \
-    vendor/bq/chaozu/proprietary/framework/com.qti.location.sdk.jar:system/framework/com.qti.location.sdk.jar \
-    vendor/bq/chaozu/proprietary/framework/com.qti.snapdragon.sdk.display.jar:system/framework/com.qti.snapdragon.sdk.display.jar \
-    vendor/bq/chaozu/proprietary/framework/com.quicinc.cne.jar:system/framework/com.quicinc.cne.jar \
-    vendor/bq/chaozu/proprietary/framework/dpmapi.jar:system/framework/dpmapi.jar \
-    vendor/bq/chaozu/proprietary/framework/embmslibrary.jar:system/framework/embmslibrary.jar \
-    vendor/bq/chaozu/proprietary/framework/izat.xt.srv.jar:system/framework/izat.xt.srv.jar \
-    vendor/bq/chaozu/proprietary/framework/qti-telephony-common.jar:system/framework/qti-telephony-common.jar \
-    vendor/bq/chaozu/proprietary/framework/tcmclient.jar:system/framework/tcmclient.jar \
+    vendor/bq/chaozu/proprietary/etc/xtwifi.conf:system/etc/xtwifi.conf \
     vendor/bq/chaozu/proprietary/lib/hw/camera.msm8937.so:system/lib/hw/camera.msm8937.so \
     vendor/bq/chaozu/proprietary/lib/libOmxSwVdec.so:system/lib/libOmxSwVdec.so \
     vendor/bq/chaozu/proprietary/lib/libOmxSwVencMpeg4.so:system/lib/libOmxSwVencMpeg4.so \
@@ -111,8 +105,13 @@ PRODUCT_COPY_FILES += \
     vendor/bq/chaozu/proprietary/lib/libarcsoft_beautyshot.so:system/lib/libarcsoft_beautyshot.so \
     vendor/bq/chaozu/proprietary/lib/libcam.beautyshot.so:system/lib/libcam.beautyshot.so \
     vendor/bq/chaozu/proprietary/lib/libgnsspps.so:system/lib/libgnsspps.so \
+    vendor/bq/chaozu/proprietary/lib/libgps.utils.so:system/lib/libgps.utils.so \
     vendor/bq/chaozu/proprietary/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
+    vendor/bq/chaozu/proprietary/lib/libloc_core.so:system/lib/libloc_core.so \
     vendor/bq/chaozu/proprietary/lib/libloc_ds_api.so:system/lib/libloc_ds_api.so \
+    vendor/bq/chaozu/proprietary/lib/libloc_eng.so:system/lib/libloc_eng.so \
+    vendor/bq/chaozu/proprietary/lib/libloc_pla.so:system/lib/libloc_pla.so \
+    vendor/bq/chaozu/proprietary/lib/libloc_stub.so:system/lib/libloc_stub.so \
     vendor/bq/chaozu/proprietary/lib/libmm-qcamera.so:system/lib/libmm-qcamera.so \
     vendor/bq/chaozu/proprietary/lib/libmmcamera_interface.so:system/lib/libmmcamera_interface.so \
     vendor/bq/chaozu/proprietary/lib/libmmjpeg_interface.so:system/lib/libmmjpeg_interface.so \
@@ -405,7 +404,6 @@ PRODUCT_COPY_FILES += \
     vendor/bq/chaozu/proprietary/vendor/lib/libperipheral_client.so:system/vendor/lib/libperipheral_client.so \
     vendor/bq/chaozu/proprietary/vendor/lib/libqcci_legacy.so:system/vendor/lib/libqcci_legacy.so \
     vendor/bq/chaozu/proprietary/vendor/lib/libqcmaputils.so:system/vendor/lib/libqcmaputils.so \
-    vendor/bq/chaozu/proprietary/vendor/lib/libqct_resampler.so:system/vendor/lib/libqct_resampler.so \
     vendor/bq/chaozu/proprietary/vendor/lib/libqdi.so:system/vendor/lib/libqdi.so \
     vendor/bq/chaozu/proprietary/vendor/lib/libqdp.so:system/vendor/lib/libqdp.so \
     vendor/bq/chaozu/proprietary/vendor/lib/libqisl.so:system/vendor/lib/libqisl.so \
@@ -515,16 +513,5 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libMpeg4SwEncoder \
-    libtime_genoff \
-    QtiTelephonyService \
-    TimeService \
-    datastatusnotification \
-    fastdormancy \
-    shutdownlistener \
-    CNEService \
-    QtiTetherService \
-    com.qualcomm.location \
-    dpmserviceapp \
-    qcrilmsgtunnel \
-    colorservice \
-    qcrilhook
+    libqct_resampler \
+    libtime_genoff
