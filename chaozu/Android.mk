@@ -1,4 +1,4 @@
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,6 +22,17 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libMpeg4SwEncoder
 LOCAL_MODULE_OWNER := bq
 LOCAL_SRC_FILES := proprietary/vendor/lib/libMpeg4SwEncoder.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libqct_resampler
+LOCAL_MODULE_OWNER := bq
+LOCAL_SRC_FILES := proprietary/vendor/lib/libqct_resampler.so
 LOCAL_MULTILIB := 32
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
@@ -168,9 +179,49 @@ LOCAL_PROPRIETARY_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := com.qti.dpmframework
+LOCAL_MODULE_OWNER := bq
+LOCAL_SRC_FILES := proprietary/framework/com.qti.dpmframework.jar
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_SUFFIX := .jar
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := com.qti.location.sdk
+LOCAL_MODULE_OWNER := bq
+LOCAL_SRC_FILES := proprietary/framework/com.qti.location.sdk.jar
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_SUFFIX := .jar
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := dpmapi
+LOCAL_MODULE_OWNER := bq
+LOCAL_SRC_FILES := proprietary/framework/dpmapi.jar
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_SUFFIX := .jar
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := qcrilhook
 LOCAL_MODULE_OWNER := bq
 LOCAL_SRC_FILES := proprietary/framework/qcrilhook.jar
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_SUFFIX := .jar
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := tcmclient
+LOCAL_MODULE_OWNER := bq
+LOCAL_SRC_FILES := proprietary/framework/tcmclient.jar
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := JAVA_LIBRARIES
